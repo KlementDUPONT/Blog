@@ -1,0 +1,72 @@
+/* ===== ANIMATIONS POUR VOTRE SITE IT ===== */
+/* Effets subtils et professionnels */
+
+/* Animation 1 : Pulse (pour boutons/raccourcis) */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animation 2 : Ligne bleue fluide (sous les liens) */
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animation 3 : Float (effet de flottement léger) */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animation 4 : Neon (pour titres) */
+@keyframes neon {
+    0% { text-shadow: 0 0 5px rgba(0, 183, 255, 0.3); }
+    50% { text-shadow: 0 0 15px rgba(0, 183, 255, 0.7); }
+    100% { text-shadow: 0 0 5px rgba(0, 183, 255, 0.3); }
+}
+
+/* Classes réutilisables */
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.underline-anim a {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-anim a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #00b7ff;
+    transition: width 0.3s ease;
+}
+
+.underline-anim:hover a::after {
+    animation: underline 0.5s forwards;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.neon-text {
+    animation: neon 4s ease-in-out infinite alternate;
+}
+
+/* Exemple d'application à vos raccourcis */
+.shortcut {
+    transition: all 0.3s ease;
+}
+
+.shortcut:hover {
+    animation: pulse 1.5s ease infinite;
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.2);
+}

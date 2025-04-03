@@ -1,0 +1,148 @@
+/*:root {
+    --bg-dark: #222222;
+    --text-light: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --accent-blue: #00b7ff;
+    --hover-effect: rgba(255, 255, 255, 0.1);
+}*/
+
+/* HTML */
+html {
+    background: #222222;
+}
+
+/* Base */
+body {
+    font-family: 'Work Sans', Arial, sans-serif;
+    /*color: #222;*/
+    background-color: #222222;
+    line-height: 34px;
+    font-weight: 300;
+    font-size: 18px;
+    /*opacity: 0;*/
+}
+
+/* Conteneur des raccourcis */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Titre principal */
+h1 {
+    font-family: "Playfair Display", Times, serif;
+    font-style: italic;
+    text-transform: none !important;
+    color: #ffffff;
+}
+
+/* Grille des raccourcis */
+.shortcut-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* Carte de raccourci */
+.shortcut {
+    /*background: rgba(0, 0, 0, 0.3);*/
+    color: white;
+    border: 1px solid #00b7ff;
+    border-radius: 5px;
+    padding: 25px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.shortcut:hover {
+    background: rgba(0, 183, 255, 0.1);
+    border-color: var(--accent-blue);
+    transform: translateY(-5px);
+}
+
+/* Liens 
+.shortcut a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+}*/
+
+.shortcut p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Signature */
+.creator {
+    margin-top: 50px;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Effets de survol modernes */
+.shortcut a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.shortcut a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+.shortcut:hover a:after {
+    width: 100%;
+}
+
+#fh5co-footer {
+    padding: 7em 0em;
+    color: rgba(255, 255, 255, 0.2);
+    position: relative;
+  }
+
+  /*#fh5co-footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 101%;
+    -webkit-transform: skewY(-7deg);
+    -moz-transform: skewY(-7deg);
+    -ms-transform: skewY(-7deg);
+    -o-transform: skewY(-7deg);
+    transform: skewY(-7deg);
+  }*/
+
+  a {
+    color: #00b7ff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    
+  }
+  a:hover, a:active, a:focus {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+  }
